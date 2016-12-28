@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D24E7C31E14C3440019A1A1 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D24E7C21E14C3440019A1A1 /* Configuration.plist */; };
+		8D24E7C61E14C5030019A1A1 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24E7C51E14C5030019A1A1 /* Plist.swift */; };
+		8D24E7C91E14C5710019A1A1 /* PlistReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24E7C81E14C5710019A1A1 /* PlistReadable.swift */; };
+		8D24E7CB1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24E7CA1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift */; };
 		8DC14E561E14451D00C8CD79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC14E551E14451D00C8CD79 /* AppDelegate.swift */; };
 		8DC14E6C1E14455400C8CD79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC14E681E14455400C8CD79 /* LaunchScreen.storyboard */; };
 		8DC14E6D1E14455400C8CD79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC14E691E14455400C8CD79 /* Main.storyboard */; };
 		8DC14E6E1E14455400C8CD79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC14E6B1E14455400C8CD79 /* ViewController.swift */; };
 		8DC14E751E14469A00C8CD79 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DC14E741E14469A00C8CD79 /* Info.plist */; };
 		8DC14E781E1446B600C8CD79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC14E771E1446B600C8CD79 /* Assets.xcassets */; };
+		8DC14E7F1E1484E700C8CD79 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC14E7E1E1484E700C8CD79 /* Accelerate.framework */; };
+		8DC14E811E1484EC00C8CD79 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC14E801E1484EC00C8CD79 /* AVFoundation.framework */; };
+		8DC14E831E1484F000C8CD79 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC14E821E1484F000C8CD79 /* AudioToolbox.framework */; };
+		8DC14E851E1484F800C8CD79 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC14E841E1484F800C8CD79 /* CoreMedia.framework */; };
+		8DC14E871E14850000C8CD79 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC14E861E14850000C8CD79 /* libc++.tbd */; };
+		8DC14E891E14850600C8CD79 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC14E881E14850600C8CD79 /* libiconv.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05875046E20C19E79F2F6D67 /* Pods-TapDictionary.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapDictionary.development.xcconfig"; path = "Pods/Target Support Files/Pods-TapDictionary/Pods-TapDictionary.development.xcconfig"; sourceTree = "<group>"; };
+		85F372BCBF219BBFCDB6CB0C /* Pods-TapDictionary.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapDictionary.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-TapDictionary/Pods-TapDictionary.distribution.xcconfig"; sourceTree = "<group>"; };
+		8D24E7C21E14C3440019A1A1 /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		8D24E7C51E14C5030019A1A1 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
+		8D24E7C81E14C5710019A1A1 /* PlistReadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReadable.swift; sourceTree = "<group>"; };
+		8D24E7CA1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptiveForceUnwrap.swift; sourceTree = "<group>"; };
 		8DC14E521E14451D00C8CD79 /* TapDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC14E551E14451D00C8CD79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DC14E681E14455400C8CD79 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -23,6 +39,12 @@
 		8DC14E6B1E14455400C8CD79 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8DC14E741E14469A00C8CD79 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC14E771E1446B600C8CD79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DC14E7E1E1484E700C8CD79 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		8DC14E801E1484EC00C8CD79 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8DC14E821E1484F000C8CD79 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8DC14E841E1484F800C8CD79 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		8DC14E861E14850000C8CD79 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		8DC14E881E14850600C8CD79 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,17 +52,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC14E891E14850600C8CD79 /* libiconv.tbd in Frameworks */,
+				8DC14E871E14850000C8CD79 /* libc++.tbd in Frameworks */,
+				8DC14E851E1484F800C8CD79 /* CoreMedia.framework in Frameworks */,
+				8DC14E831E1484F000C8CD79 /* AudioToolbox.framework in Frameworks */,
+				8DC14E811E1484EC00C8CD79 /* AVFoundation.framework in Frameworks */,
+				8DC14E7F1E1484E700C8CD79 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30AE6272CB1219A3F1D06B28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05875046E20C19E79F2F6D67 /* Pods-TapDictionary.development.xcconfig */,
+				85F372BCBF219BBFCDB6CB0C /* Pods-TapDictionary.distribution.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		382E903AB43EFFC34BF3786C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DC14E881E14850600C8CD79 /* libiconv.tbd */,
+				8DC14E861E14850000C8CD79 /* libc++.tbd */,
+				8DC14E841E1484F800C8CD79 /* CoreMedia.framework */,
+				8DC14E821E1484F000C8CD79 /* AudioToolbox.framework */,
+				8DC14E801E1484EC00C8CD79 /* AVFoundation.framework */,
+				8DC14E7E1E1484E700C8CD79 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D24E7C41E14C5030019A1A1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8D24E7C51E14C5030019A1A1 /* Plist.swift */,
+				8D24E7CA1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		8D24E7C71E14C5710019A1A1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8D24E7C81E14C5710019A1A1 /* PlistReadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		8DC14E491E14451D00C8CD79 = {
 			isa = PBXGroup;
 			children = (
 				8DC14E541E14451D00C8CD79 /* TapDictionary */,
 				8DC14E531E14451D00C8CD79 /* Products */,
+				30AE6272CB1219A3F1D06B28 /* Pods */,
+				382E903AB43EFFC34BF3786C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				8DC14E551E14451D00C8CD79 /* AppDelegate.swift */,
-				8DC14E761E1446B600C8CD79 /* Assets */,
 				8DC14E671E14455400C8CD79 /* InterfaceBuilder */,
 				8DC14E6A1E14455400C8CD79 /* ViewControllers */,
+				8D24E7C71E14C5710019A1A1 /* Protocols */,
+				8D24E7C41E14C5030019A1A1 /* Utility */,
+				8DC14E761E1446B600C8CD79 /* Assets */,
 				8DC14E731E14469A00C8CD79 /* SupportingFiles */,
 			);
 			path = TapDictionary;
@@ -76,24 +147,16 @@
 		8DC14E6A1E14455400C8CD79 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8DC14E6F1E14467D00C8CD79 /* SupportingFiles */,
 				8DC14E6B1E14455400C8CD79 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		8DC14E6F1E14467D00C8CD79 /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = SupportingFiles;
-			path = TapDictionary/SupportingFiles;
-			sourceTree = SOURCE_ROOT;
-		};
 		8DC14E731E14469A00C8CD79 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				8DC14E741E14469A00C8CD79 /* Info.plist */,
+				8D24E7C21E14C3440019A1A1 /* Configuration.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -113,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DC14E641E14451D00C8CD79 /* Build configuration list for PBXNativeTarget "TapDictionary" */;
 			buildPhases = (
+				8DC14E7D1E144C7100C8CD79 /* Copy Configuration */,
 				8DC14E4E1E14451D00C8CD79 /* Sources */,
 				8DC14E4F1E14451D00C8CD79 /* Frameworks */,
 				8DC14E501E14451D00C8CD79 /* Resources */,
@@ -139,7 +203,7 @@
 					8DC14E511E14451D00C8CD79 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = A56D86G827;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -168,6 +232,7 @@
 			files = (
 				8DC14E751E14469A00C8CD79 /* Info.plist in Resources */,
 				8DC14E6D1E14455400C8CD79 /* Main.storyboard in Resources */,
+				8D24E7C31E14C3440019A1A1 /* Configuration.plist in Resources */,
 				8DC14E781E1446B600C8CD79 /* Assets.xcassets in Resources */,
 				8DC14E6C1E14455400C8CD79 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -175,13 +240,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8DC14E7D1E144C7100C8CD79 /* Copy Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Configuration";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ROOT=$SRCROOT/TapDictionary/SupportingFiles;\ncp $ROOT/Configuration.$CONFIGURATION.plist $ROOT/Configuration.plist";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8DC14E4E1E14451D00C8CD79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D24E7C61E14C5030019A1A1 /* Plist.swift in Sources */,
 				8DC14E6E1E14455400C8CD79 /* ViewController.swift in Sources */,
+				8D24E7C91E14C5710019A1A1 /* PlistReadable.swift in Sources */,
 				8DC14E561E14451D00C8CD79 /* AppDelegate.swift in Sources */,
+				8D24E7CB1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,10 +327,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A56D86G827;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TapDictionary/ManualFrameworks",
+					"$(PROJECT_DIR)/ManualFrameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TapDictionary/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.TapDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6f65e89e-1170-4f8d-918c-f89bbe61f672";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.mikekavouras.TapDictionary";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Development;
@@ -296,11 +388,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = A56D86G827;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TapDictionary/ManualFrameworks",
+					"$(PROJECT_DIR)/ManualFrameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/TapDictionary/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.TapDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "20c1ba37-f87c-4de6-810f-c2aaa5570aed";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.mikekavouras.TapDictionary";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Distribution;
