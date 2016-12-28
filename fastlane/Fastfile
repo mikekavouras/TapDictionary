@@ -1,0 +1,78 @@
+require 'dotenv'
+require 'yaml'
+
+Dotenv.load
+
+lane :beta do |options|
+  build
+  upload
+end
+
+lane :configure do |options|
+  data = ::YAML.load_file(File.new("configuration/configuration.yml"))
+  envs = data.keys
+  keys = data[envs.first].keys
+
+  envs.each do |env|
+    File.open("../TapDictionary/SupportingFiles/Configuration.#{env}.plist", 'w') do |file|
+      file.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n")
+      file.write("<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n")
+      file.write("<plist version=\"1.0\">\n<dict>\n></dict>\n</plist>")
+    end
+
+    update_info_plist(
+      plist_path: "TapDictionary/SupportingFiles/Configuration.#{env}.plist",
+      block: lambda { |plist|
+        keys.each do |key|
+          plist[key] = data[env][key]
+        end
+      }
+    )
+  end
+end
+
+lane :certs do
+  ['development', 'appstore'].each do |env|
+    match(type: env)
+  end
+end
+
+#----- Certificates / Provisioning -----#
+lane :add_devices do |options|
+  raise "no device name specified" unless options[:names]
+  raise "no device udid specified" unless options[:udids]
+
+  system("./add_devices.rb #{options[:names]} #{options[:udids]}", out: $stdout, err: :out)
+
+  update_profiles
+end
+
+private_lane :update_profiles do |options|
+  system("./update_profiles.rb", out: $stdout, err: :out)
+end
+
+private_lane :upload do |options|
+  pilot(
+    ipa:  "build/TapDictionary.ipa",
+    app_identifier: ENV['APP_IDENTIFIER'],
+    username: ENV['APPLE_USERNAME'],
+    skip_waiting_for_build_processing: true,
+  )
+end
+
+private_lane :build do |options|
+  certs
+  # increment_build_number
+  configure
+  gym(
+    verbose: true,
+    include_bitcode: true,
+    include_symbols: true,
+    scheme: "Distribution",
+    output_directory: "build",
+    export_options: {
+      thinning: "<thin-for-all-variants>"
+    }
+  )
+end
+
