@@ -13,6 +13,7 @@
 		8D24E7CB1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24E7CA1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift */; };
 		8D9528011E1582470064AFEE /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D9527FF1E1582470064AFEE /* MicroBlink.bundle */; };
 		8D9528021E1582470064AFEE /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9528001E1582470064AFEE /* MicroBlink.framework */; };
+		8D96770B1E15916D009572A8 /* OCRResultsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D96770A1E15916D009572A8 /* OCRResultsParser.swift */; };
 		8DC14E561E14451D00C8CD79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC14E551E14451D00C8CD79 /* AppDelegate.swift */; };
 		8DC14E6C1E14455400C8CD79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC14E681E14455400C8CD79 /* LaunchScreen.storyboard */; };
 		8DC14E6D1E14455400C8CD79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC14E691E14455400C8CD79 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		8D24E7CA1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptiveForceUnwrap.swift; sourceTree = "<group>"; };
 		8D9527FF1E1582470064AFEE /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MicroBlink.bundle; sourceTree = "<group>"; };
 		8D9528001E1582470064AFEE /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicroBlink.framework; sourceTree = "<group>"; };
+		8D96770A1E15916D009572A8 /* OCRResultsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRResultsParser.swift; sourceTree = "<group>"; };
 		8DC14E521E14451D00C8CD79 /* TapDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC14E551E14451D00C8CD79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DC14E681E14455400C8CD79 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 			path = ManualFrameworks;
 			sourceTree = "<group>";
 		};
+		8D9677091E159162009572A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8D96770A1E15916D009572A8 /* OCRResultsParser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8DC14E491E14451D00C8CD79 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC14E551E14451D00C8CD79 /* AppDelegate.swift */,
+				8D9677091E159162009572A8 /* Models */,
 				8DC14E671E14455400C8CD79 /* InterfaceBuilder */,
 				8DC14E6A1E14455400C8CD79 /* ViewControllers */,
 				8D24E7C71E14C5710019A1A1 /* Protocols */,
@@ -283,6 +294,7 @@
 				8D24E7C91E14C5710019A1A1 /* PlistReadable.swift in Sources */,
 				8DC14E561E14451D00C8CD79 /* AppDelegate.swift in Sources */,
 				8D24E7CB1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift in Sources */,
+				8D96770B1E15916D009572A8 /* OCRResultsParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,8 +364,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.TapDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6f65e89e-1170-4f8d-918c-f89bbe61f672";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.mikekavouras.TapDictionary";
+				PROVISIONING_PROFILE = "43d6d45e-7fac-448f-8780-25579844be13";
+				PROVISIONING_PROFILE_SPECIFIER = "com.mikekavouras.TapDictionary Development";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Development;
@@ -415,8 +427,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikekavouras.TapDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "20c1ba37-f87c-4de6-810f-c2aaa5570aed";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.mikekavouras.TapDictionary";
+				PROVISIONING_PROFILE = "241f5cdc-2602-40ea-b152-34a7bcaf40d8";
+				PROVISIONING_PROFILE_SPECIFIER = "com.mikekavouras.TapDictionary AppStore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Distribution;

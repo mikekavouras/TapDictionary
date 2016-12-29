@@ -81,22 +81,21 @@ extension ViewController: PPScanningDelegate {
         guard let viewController = scanningViewController as? PPScanningViewController else { return }
         viewController.pauseScanning()
         
-        for result in results {
-            guard let ocrResult = result as? PPBlinkOcrRecognizerResult else { continue }
-            print("OCR results are:")
-            print("Raw ocr: \(ocrResult.parsedResult(forName: "RawOcr"))")
-            
-            let layout = ocrResult.ocrLayout()
-            print(layout)
-            print("Dimensions of ocrLayout are \(NSStringFromCGRect(layout.box))")
-        }
+        let _ = OCRResultsParser.parse(results)
         
         viewController.resumeScanningAndResetState(false)
     }
     
-    func scanningViewControllerUnauthorizedCamera(_ scanningViewController: UIViewController) {}
+    func scanningViewController(_ scanningViewController: UIViewController, invalidLicenseKeyWithError error: Error) {
+        print("poiadsfjapsdlfj")
+    }
+    func scanningViewControllerUnauthorizedCamera(_ scanningViewController: UIViewController) {
+        print("unauthorized")
+    }
     
-    func scanningViewController(_ scanningViewController: UIViewController, didFindError error: Error) {}
+    func scanningViewController(_ scanningViewController: UIViewController, didFindError error: Error) {
+        print("\(error)")
+    }
     
     func scanningViewControllerDidClose(_ scanningViewController: UIViewController) {
         dismiss(animated: true, completion: nil)
