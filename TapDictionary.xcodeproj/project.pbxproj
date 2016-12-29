@@ -11,6 +11,8 @@
 		8D24E7C61E14C5030019A1A1 /* Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24E7C51E14C5030019A1A1 /* Plist.swift */; };
 		8D24E7C91E14C5710019A1A1 /* PlistReadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24E7C81E14C5710019A1A1 /* PlistReadable.swift */; };
 		8D24E7CB1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24E7CA1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift */; };
+		8D9528011E1582470064AFEE /* MicroBlink.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D9527FF1E1582470064AFEE /* MicroBlink.bundle */; };
+		8D9528021E1582470064AFEE /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9528001E1582470064AFEE /* MicroBlink.framework */; };
 		8DC14E561E14451D00C8CD79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC14E551E14451D00C8CD79 /* AppDelegate.swift */; };
 		8DC14E6C1E14455400C8CD79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC14E681E14455400C8CD79 /* LaunchScreen.storyboard */; };
 		8DC14E6D1E14455400C8CD79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC14E691E14455400C8CD79 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		8D24E7C51E14C5030019A1A1 /* Plist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plist.swift; sourceTree = "<group>"; };
 		8D24E7C81E14C5710019A1A1 /* PlistReadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReadable.swift; sourceTree = "<group>"; };
 		8D24E7CA1E14C5D90019A1A1 /* DescriptiveForceUnwrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptiveForceUnwrap.swift; sourceTree = "<group>"; };
+		8D9527FF1E1582470064AFEE /* MicroBlink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MicroBlink.bundle; sourceTree = "<group>"; };
+		8D9528001E1582470064AFEE /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicroBlink.framework; sourceTree = "<group>"; };
 		8DC14E521E14451D00C8CD79 /* TapDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC14E551E14451D00C8CD79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DC14E681E14455400C8CD79 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 				8DC14E891E14850600C8CD79 /* libiconv.tbd in Frameworks */,
 				8DC14E871E14850000C8CD79 /* libc++.tbd in Frameworks */,
 				8DC14E851E1484F800C8CD79 /* CoreMedia.framework in Frameworks */,
+				8D9528021E1582470064AFEE /* MicroBlink.framework in Frameworks */,
 				8DC14E831E1484F000C8CD79 /* AudioToolbox.framework in Frameworks */,
 				8DC14E811E1484EC00C8CD79 /* AVFoundation.framework in Frameworks */,
 				8DC14E7F1E1484E700C8CD79 /* Accelerate.framework in Frameworks */,
@@ -103,6 +108,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		8D9527FE1E1582470064AFEE /* ManualFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D9527FF1E1582470064AFEE /* MicroBlink.bundle */,
+				8D9528001E1582470064AFEE /* MicroBlink.framework */,
+			);
+			path = ManualFrameworks;
+			sourceTree = "<group>";
+		};
 		8DC14E491E14451D00C8CD79 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +124,7 @@
 				8DC14E531E14451D00C8CD79 /* Products */,
 				30AE6272CB1219A3F1D06B28 /* Pods */,
 				382E903AB43EFFC34BF3786C /* Frameworks */,
+				8D9527FE1E1582470064AFEE /* ManualFrameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,6 +250,7 @@
 				8D24E7C31E14C3440019A1A1 /* Configuration.plist in Resources */,
 				8DC14E781E1446B600C8CD79 /* Assets.xcassets in Resources */,
 				8DC14E6C1E14455400C8CD79 /* LaunchScreen.storyboard in Resources */,
+				8D9528011E1582470064AFEE /* MicroBlink.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
