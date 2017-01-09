@@ -17,7 +17,7 @@ struct OCRResultsParser {
             print("OCR results are:")
             print("Raw ocr: \(ocrResult.parsedResult(forName: "RawOcr"))")
             
-            let layout = ocrResult.ocrLayout(forParserGroup: "defaultParserGroup")	
+            let layout = ocrResult.getOcrLayoutElement("defaultParserGroup.OCRResult")
             print("Dimensions of ocrLayout are \(NSStringFromCGRect(layout.box))")
         }
         
