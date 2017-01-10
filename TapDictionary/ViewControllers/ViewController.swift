@@ -12,7 +12,7 @@ import MicroBlink
 
 class ViewController: UIViewController {
     
-    var list: [AnyHashable: NSValue] = [:]
+    var list: [String: NSValue] = [:]
     
     lazy var coordinator: PPCameraCoordinator? = {
         var error: NSError?
@@ -34,16 +34,19 @@ class ViewController: UIViewController {
         return c
     }()
     
+    lazy var scanningViewController: UIViewController? = {
+        guard let coordinator = self.coordinator else { return nil }
+        return PPViewControllerFactory.cameraViewController(with: self, coordinator: coordinator, error: nil)
+    }()
     
     // MARK: - Life cycle
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        guard let coordinator = coordinator else { return }
-        
-        let scanningViewController = PPViewControllerFactory.cameraViewController(with: self, coordinator: coordinator, error: nil)
-        present(scanningViewController, animated: true, completion: nil)
+    
+        if let viewController = scanningViewController {
+            present(viewController, animated: false, completion: nil)
+        }
     }
     
     
@@ -59,17 +62,27 @@ class ViewController: UIViewController {
         for (key, value) in list {
             let rect = value.cgRectValue
             if rect.contains(point) {
-//                (scanningViewController as? PPScanningViewController)?.pauseScanning()
+                print("FOUND: \(key)")
+                (scanningViewController as? PPScanningViewController)?.pauseScanning()
               
-                print(key)
-//                if UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: key) {
-//                    showDefinitionForWord(key)
-//                } else {
+                UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: key)
+                if UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: key) {
+                    showDictionary(forWord: key)
+                } else {
 //                    let guesses = spellCheck(key)
 //                    displaySuggestionViewControllerWithSuggestions(guesses)
-//                }
+                    (scanningViewController as? PPScanningViewController)?.resumeScanningAndResetState(false)
+                }
             }
         }
+    }
+    
+    private func showDictionary(forWord word: String) {
+        let vc = UIReferenceLibraryViewController(term: word)
+        scanningViewController?.present(vc, animated: true, completion: nil)
+//        scanningViewController?.presentViewController(vc, animated: true, completion: nil)
+//            UserDictionary.sharedDictionary.logWordViewed(word)
+//        })
     }
 }
 
@@ -81,7 +94,7 @@ extension ViewController: PPScanningDelegate {
         guard let viewController = scanningViewController as? PPScanningViewController else { return }
         viewController.pauseScanning()
         
-        let _ = OCRResultsParser.parse(results)
+        list = OCRResultsParser.parse(results)
         
         viewController.resumeScanningAndResetState(false)
     }
